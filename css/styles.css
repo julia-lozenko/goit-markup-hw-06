@@ -114,7 +114,9 @@ img {
 .logo-accent-color {
   color: var(--accent-color);
 }
-
+.logo:focus{
+  outline: none;
+}
 /* Header-nav */
 
 .header-nav {
@@ -152,8 +154,10 @@ img {
   fill: currentColor;
 }
 
-.header-nav-item-link:hover {
+.header-nav-item-link:hover,
+.header-nav-item-link:focus{
   color: var(--accent-color);
+  outline: none;
 }
 
 .header-contacts .header-contacts-item + .header-contacts-item {
@@ -167,10 +171,15 @@ img {
 .header-contacts-item-link:hover,
 .header-contacts-item-link:focus {
   color: var(--accent-color);
+  outline: none;
 }
 
 .header-nav-item-link {
   position: relative;
+}
+
+.header-nav-item-link.is-current {
+  color: var(--accent-color);
 }
 
 .header-nav-item-link.is-current.header-nav-item-link::after {
@@ -249,6 +258,10 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
+}
+
+.button:focus {
+outline: none;
 }
 
 /* Advantages */
@@ -395,6 +408,7 @@ img {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 .social-list-link:hover .social-list-icon,
@@ -443,6 +457,7 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
 }
 .portfolio-link {
   text-decoration: none;
@@ -498,15 +513,17 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 
-.card {
+.portfolio-link {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card:hover,
-.card:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
   0px 4px 4px rgba(0, 0, 0, 0.06), 
   1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
 }
 
 .img-overlay {
@@ -531,10 +548,6 @@ img {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
-}
-
-.card:hover .overlay {
-  transform: translateY(0);
 }
 
 .portfolio-link:hover .overlay,
@@ -575,11 +588,13 @@ img {
 .clients-list-link:hover,
 .clients-list-link:focus {
   border-color: var(--accent-color);
+  outline: none;
 }
 
 .clients-list-link:hover .clients-list-icon,
 .clients-list-link:focus .clients-list-icon {
   fill: var(--accent-color);
+  outline: none;
 }
 
 /*==================END MAIN=================*/
@@ -601,6 +616,10 @@ img {
   color: #ffffff;
   margin-bottom: 20px;
 }
+.footer-logo:focus {
+  outline:none;
+}
+
 .footer-contacts-address {
   font-style: normal;
   font-weight: normal;
@@ -619,6 +638,10 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+
+.footer-contacts-link:hover{
+  outline: none;
 }
 
 /* Social links */
@@ -672,12 +695,21 @@ img {
 width: 358px;
 height: 50px;
 margin: 0;
+padding:15px 16px;
 
 border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
 background-color: #2F303A;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+
+.footer-form-input::placeholder{
+color: rgba(255, 255, 255, 0.6);
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03em;
+}
+
 
 .footer-input-btn {
 display: inline-flex;
@@ -707,6 +739,10 @@ background-color: var(--accent-color);
   width: 24px;
   height: 24px;
   fill: #ffffff;
+}
+
+.footer-input-btn:focus {
+outline: none;
 }
 
 /*==================END FOOTER=================*/
@@ -914,6 +950,10 @@ letter-spacing: 0.06em;
 
 color: #ffffff;
 cursor: pointer;
+}
+
+.modal-form-btn:focus{
+  outline: none;
 }
 
 .modal-form-policy:checked + .modal-form-policy-text::before {
