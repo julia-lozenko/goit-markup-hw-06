@@ -659,7 +659,7 @@ outline: none;
   width: 206px;
   height: 80px;
 
-  margin-left: 70px;
+  margin-left: 83px;
 }
 
 .footer-social-list {
@@ -688,10 +688,12 @@ outline: none;
 }
 
 .footer-input-container {
-  margin-left: 70px;
+  margin-left: 93px;
 }
 
 .footer-form-input{
+display: inline-flex;
+margin: 0px;
 width: 358px;
 height: 50px;
 margin: 0;
@@ -710,15 +712,19 @@ line-height: 1.25;
 letter-spacing: 0.03em;
 }
 
-
+.footer-form-input:focus{
+outline: none;
+}
 .footer-input-btn {
-display: inline-flex;
+position: relative;
+
 border: none;
 margin: 0;
 cursor: pointer;
 
 border-radius: 4px;
 padding: 10px 62px 10px 29px;
+margin-left: 10px;
 
 width:200px;
 height: 50px;
@@ -735,6 +741,11 @@ background-color: var(--accent-color);
 
 }
 .footer-btn-icon {
+  position: absolute;
+
+  top: 13px;
+  right: 28px;
+
   display: block;
   width: 24px;
   height: 24px;
@@ -908,7 +919,7 @@ border-color: var(--accent-color);
 
 .modal-form-policy-text {
 display: flex;
-text-align: center;
+align-items: center;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
@@ -950,6 +961,7 @@ letter-spacing: 0.06em;
 
 color: #ffffff;
 cursor: pointer;
+
 }
 
 .modal-form-btn:focus{
